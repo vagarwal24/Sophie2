@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a96cabab0e.js" crossorigin="anonymous"></script>
+
+<style>
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+</style>
+
+
+</head>
+
+
+<body  style="background-color: #D1F5F2">
+	<div class="container">
+<div class="row">
+<center>
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Home Automation
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Living Room</a></li>
+    <li><a href="#">Kitchen</a></li>
+    <li><a href="#">Bed Room</a></li>
+     <li><a href="#">Reading Room</a></li>
+      <li><a href="#">Bath Room</a></li>
+       <li><a href="#">Baby Room</a></li>
+  </ul>
+</div>
+</center>
+</div>
+
+
+
+<br/>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+       <div class="card" style="background-color: #ffffff; border-radius: 10%">
+	<div class="card-body" style="text-align: center;padding:10% 10% 10% 10%">
+<img src="lights.png" style="width: 50%; height: 75px"/>
+<br/>
+<b>Lights</b>
+</div>
+</div>
+      </div>
+
+      <div class="item">
+      <div class="card" style="background-color: #ffffff; border-radius: 10%">
+	<div class="card-body" style="text-align: center;padding:10% 10% 10% 10%">
+<img src="ac.jpg" style="width: 65%; height: 75px"/>
+<br/>
+<b>Air Conditioner</b>
+
+</div>
+</div>
+      </div>
+    
+      <div class="item">
+       <div class="card" style="background-color: #ffffff; border-radius: 10%">
+	<div class="card-body" style="text-align: center;padding:10% 10% 10% 10%">
+<img src="speaker.jpg" style="width: 45%; height: 75px"/>
+<br/>
+<b>Speaker</b>
+
+</div>
+</div>
+      </div>
+<div class="item">
+       <div class="card" style="background-color: #ffffff; border-radius: 10%">
+	<div class="card-body" style="text-align: center;padding:10% 10% 10% 10%">
+<img src="tv.jpg" style="width: 65%; height: 75px"/>
+<br/>
+<b>T.v</b>
+
+</div>
+</div>
+      </div>
+
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<br/>
+
+<!-- Carousel -->
+<div class="col-xs-3">
+<div class="card" style="background-color: #ffffff; border-radius: 10%">
+	<div class="card-body" style="text-align: center;padding:10% 10% 10% 10%">
+<img src="lights.png" style="width: 100%; height: 60px"/>
+<br/>
+<b>Lights</b>
+</div>
+</div>
+</div>
+
+<!--device switch collumn -->
+<div class="col-xs-3">
+
+<div class="card" style="background-color: #ffffff; border-radius: 10%">
+	<div class="card-body" style="text-align: center;padding:10% 10% 10% 10%">
+<img src="ac.jpg" style="width: 100%; height: 60px"/>
+<br/>
+<b>AC</b>
+
+</div>
+</div>
+</div>
+<!--device switch collumn -->
+<div class="col-xs-3">
+
+<div class="card" style="background-color: #ffffff; border-radius: 10%">
+	<div class="card-body" style="text-align: center;padding:10% 10% 10% 10%">
+<img src="speaker.jpg" style="width: 100%; height: 60px"/>
+<br/>
+<b>Speaker</b>
+
+</div>
+</div>
+</div>
+<!--device switch collumn -->
+<div class="col-xs-3">
+
+<div class="card" style="background-color: #ffffff; border-radius: 10%">
+	<div class="card-body" style="text-align: center;padding:10% 10% 10% 10%">
+<img src="tv.jpg" style="width: 100%; height: 60px"/>
+<br/>
+<b>T.V</b>
+
+</div>
+</div>
+</div>
+<br/>
+<br/>
+
+
+</div>
+
+<div class="row" style="margin:0 0 0 0!important">
+
+<div class="col-xs-6">
+<div class="row">
+  <div class="col-xs-6">
+   <font style="font-size: 50px;color: gray"><i class="fa fa-power-off" aria-hidden="true"></i></font> 
+  </div>
+    <div class="col-xs-6">
+    <h3>Power</h3>
+    </div>
+</div>
+</div>
+<div class="col-xs-6" style="padding-top: 20px;text-align: right;">
+<!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+</div>
+ </div>
+<br/>
+
+<div class="row" style="margin:0 0 0 0!important">
+
+<div class="col-xs-6">
+  <div class="row">
+    <div class="col-xs-6">
+      <font style="font-size: 50px;color: gray"><i class="fa fa-thermometer-full" aria-hidden="true"></i></font> 
+</div>
+<div class="col-xs-6">
+    <h3>Temperature</h3>
+    </div>
+  </div>
+</div>
+
+<div class="col-xs-6" style="padding-top: 20px;text-align: right; height: 20px">
+<font style="font-size: 30px">25 &deg; C </font> 
+</div>
+</div>
+<br/>
+<div class="progress">
+  <div class="progress-bar" style="width:70%"></div>
+</div>
+<br/>
+<div class="row" style="margin:0 0 0 0!important">
+<div class="col-xs-3">
+<div class="card">
+    <img class="card-img-top" src="Vaccume.png" alt="Card image" style="width:75%">
+    <div class="card-body">
+      <h4 class="card-title">Cleanning</h4>
+    </div>
+  </div>
+    </div>
+
+    <div class="col-xs-3">
+<div class="card">
+     <font style="font-size: 225%;color: gray"><i class="fa fa-leaf" aria-hidden="true"></i></font> 
+    <div class="card-body">
+      <h4 class="card-title">Eco</h4>
+    </div>
+  </div>
+    </div>
+<div class="col-xs-3">
+<div class="card">
+    <img class="card-img-top" src="sleeping.jpg" alt="Card image" style="width:75%">
+    <div class="card-body">
+      <h4 class="card-title">Sleeping</h4>
+    </div>
+  </div>
+    </div>
+    <div class="col-xs-3">
+    <div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Sleeping Mode</h4>
+    <p class="card-text">Some example text.</p>
+  </div>
+</div>
+</div>
+<br/>
+<div class="col-xs-4">
+<div class="card">
+     <font style="font-size: 50px;color: gray"><i class="fa fa-home" aria-hidden="true"></i></font> 
+    <div class="card-body">
+    </div>
+  </div>
+    </div>
+ <div class="col-xs-4">
+<div class="card">
+     <font style="font-size: 50px;color: gray"><i class="fa fa-cogs" aria-hidden="true"></i></font> 
+    <div class="card-body">
+    </div>
+  </div>
+    </div>  
+<div class="col-xs-4">
+<div class="card">
+     <font style="font-size: 50px;color: gray"><i class="fa fa-bell" aria-hidden="true"></i></font> 
+    <div class="card-body">
+    </div>
+  </div>
+    </div>       
+</div>
+</body>
+</html>
